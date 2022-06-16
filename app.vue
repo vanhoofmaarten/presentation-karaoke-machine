@@ -1,7 +1,7 @@
 <template>
   <div class="scroller">
     <div v-if="errorMessage" class="error">{{ errorMessage }}</div>
-    <Wizard class="screen" @submit="handleWizardSubmit" :loading="state.loading" />
+    <Wizard class="screen" @submit="handleWizardSubmit" :loading="state.loading" :amount="10" />
     <Slide ref="slideRefs" v-for="(slide, index) in state.slides" :key="index" class="screen slide" :slide="slide" />
     <RandomDate class="screen" />
   </div>

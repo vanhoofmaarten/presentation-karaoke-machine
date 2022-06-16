@@ -17,18 +17,19 @@
 
 <script setup lang="ts">
 import InputText from 'primevue/InputText'
-
 const emit = defineEmits(['submit'])
 
-const { loading } = defineProps({
+const { loading, amount } = defineProps({
   loading: {
     default: false,
     type: Boolean,
+  },
+  amount: {
+    default: 2,
+    type: Number,
   }
 })
 
-
-const amount = 4
 const keywords = []
 
 function handleWizardSubmit(data) {
