@@ -39,9 +39,14 @@
 }
 
 :root {
-  --text-color: #1e293b;
+  --text-color: #334155;
+  --text-color-dark: #0f172a;
   --bg-color: #fff;
   --bg-color-accent: #f1f5f9;
+}
+
+strong {
+  color: var(--text-color-dark);
 }
 
 h1,
