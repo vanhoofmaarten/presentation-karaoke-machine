@@ -1,6 +1,9 @@
 <template>
   <form class="wizard" @submit.prevent="handleWizardSubmit">
-    <h1>Presentation <br> karaoke machine</h1>
+    <h1>
+      Presentation <br />
+      karaoke machine
+    </h1>
     <p class="intro">First, give us some keywords</p>
 
     <div class="inputs">
@@ -11,13 +14,12 @@
     </div>
 
     <Button label="Generate slides" class="p-button-lg p-button-raised" :loading="loading" type="submit" />
-
   </form>
 </template>
 
 <script setup lang="ts">
-import InputText from 'primevue/InputText'
-const emit = defineEmits(['submit'])
+import InputText from "primevue/inputtext";
+const emit = defineEmits(["submit"]);
 
 const { loading, amount } = defineProps({
   loading: {
@@ -27,15 +29,14 @@ const { loading, amount } = defineProps({
   amount: {
     default: 2,
     type: Number,
-  }
-})
+  },
+});
 
-const keywords = []
+const keywords = [];
 
 function handleWizardSubmit(data) {
-  emit('submit', keywords)
+  emit("submit", keywords);
 }
-
 </script>
 
 <style>
@@ -79,6 +80,6 @@ h1 {
 
 label {
   display: inline-block;
-  margin-bottom: .33rem;
+  margin-bottom: 0.33rem;
 }
 </style>
